@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -7,366 +7,12 @@
     <title>5조</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
-
-        * {
-            font-family: "Jua", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-
-        body {
-            padding-top: 60px;
-            background-color: #eff2f8;
-        }
-
-        #header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 45px 60px;
-            background-color: white;
-            color: #6a75ca;
-            font-size: 18px;
-            z-index: 10;
-        }
-
-        /*팀 사진 */
-        .pictures {
-            display: flex;
-            justify-content: center;
-            /* 가로 중앙 정렬 */
-            padding: 40px;
-            gap: 80px;
-            /*팀사진간의 간격*/
-        }
-
-        .profile {
-            display: flex;
-            /* 가로 정렬 */
-            flex-direction: column;
-           /* 세로 정렬 */
-            align-items: center;
-           /* 세로 중앙 정렬 */
-        }
-
-        .profile img {
-            width: 300px;
-            height: 350px;
-            border-radius: 18%;
-            /* 완전한 원형 */
-            object-fit: cover;
-            /* 비율 유지하며 꽉 채우기 */
-            border: 2px solid #ddd;
-            /* 테두리 추가 */
-            transition: transform 0.3s ease-in-out;
-            /* 호버 시 애니메이션 효과 */
-        }
-
-        .profile img:hover {
-            transform: scale(1.1);
-            /* 호버 시 이미지 확대 */
-            transform: scale(1.1);
-            /* 호버 시 이미지 확대 */
-        }
-
-        .name {
-            text-align: center;
-            margin-top: 20px;
-            /* 이미지와 이름 사이 간격 */
-        }
-
-        /*팀 이름*/
-        .teamName {
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 70px;
-        }
-
-        .teamName h2 {
-            font-size: 70px;
-            font-weight: bold;
-            color: #A593E0;
-        }
-
-
-        .name h5 {
-            /* 팀원 이름 */
-            margin: 5px 0;
-            font-size: 50px;
-            color: #A593E0;
-        }
-
-
-        .name .mbti {
-            font-size: 25px;
-            color: gray;
-        }
-
-        /* 팀 규칙 */
-        .teamRule {
-            /* article로 묶어 칸 전체 색깔 바꿈 */
-            background-color: #FFFFF3;
-            padding: 150px 150px;
-            border-radius: 10px;
-            margin-top: 200px;
-            /*위에 요소와 간격 */
-        }
-
-        .rule-item {
-            margin-bottom: 15px;
-            font-size: 30px;
-            font-weight: 500;
-        }
-
-        .rule-item p {
-            margin: 0;
-        }
-
-        /*팀 목표 */
-        .teamgorl {
-            padding: 150px 150px;
-            border-radius: 10px;
-
-        }
-
-        .gorl-item {
-            margin-bottom: 15px;
-            font-size: 30px;
-            font-weight: 500;
-        }
-
-        .gorl-item p {
-            margin: 0;
-        }
-
-        /*방명록*/
-        .input-container {
-            margin: 0px 100px 0px 100px;
-            /* 위, 아래 30px | 좌, 우 100px */
-            display: flex;
-            align-items: start;
-            gap: 15px;
-            justify-content: start;
-        }
-
-        /* 인풋 박스를 감싸는 div */
-        .input-box {
-            position: relative;
-            /* 자식 요소의 위치를 상대적으로 설정 */
-            width: 15%;
-            /* Name 입력 필드 */
-        }
-
-        .comment-title {
-            position: relative;
-            /* 자식 요소의 위치를 상대적으로 설정 */
-            width: 75%;
-            /* Comment 입력 필드 */
-        }
-
-        /* 개별 댓글 박스 */
-        .comment-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 10px;
-            background: transparent;
-        }
-
-        /* 라벨 스타일 */
-        .input-box label,
-        .comment-title label {
-            font-size: 20px;
-            color: #566270;
-            font-weight: bold;
-            padding-left: 5px;
-        }
-
-        /* 입력 필드 스타일 (밑줄만 보이도록) */
-        .input-box input,
-        .comment-title input {
-            width: 100%;
-            padding: 5px;
-            border: none;
-            border-bottom: 2px solid #E0E3DA;
-            /* 밑줄만 표시 */
-            outline: none;
-            font-size: 18px;
-            background: transparent;
-        }
-
-        /* 등록 버튼 스타일 */
-        .submit-btn {
-            padding: 8px 15px;
-            /* 상하 8px 좌우 15px */
-            width: 10%;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            background: #A593E0;
-            font-size: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out;
-            /* 호버 시 부드럽게 색상 변경 */
-        }
-
-        .submit-btn:hover {
-            background: #566270;
-            /* 조금 더 어두운 보라색 */
-        }
-
-        .commentslist {
-            margin: 10px 80px 100px 80px;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-            align-items: flex-end;
-            font-size: 30px;
-            color: #566270;
-        }
-
-        .savedname {
-            width: 15%;
-            font-size: 30px;
-            display: flex;
-            color: #A593E0;
-            align-items: center;
-            justify-content: start;
-        }
-
-        .savedcomment {
-            width: 65%;
-            padding-left: 20px;
-            font-size: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: start;
-        }
-
-        .saveddate {
-            width: 10%;
-            font-size: 15px;
-            color: #566270;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .deletecomment {
-            width: 10%;
-            color: rgb(190, 31, 31);
-            border: none;
-            font-size: 15px;
-            align-items: center;
-            justify-content: center;
-            background: transparent;
-        }
-
-        .list-group-item {
-            font-size: 30px;
-        }
-
-        /*조 이름*/
-        @keyframes colorChange {
-            0% {
-                color: palevioletred;
-            }
-
-            25% {
-                color: coral;
-            }
-
-            50% {
-                color: deepskyblue;
-            }
-
-            75% {
-                color: mediumseagreen;
-            }
-
-            100% {
-                color: palevioletred;
-            }
-        }
-
-        .animated-text {
-            animation: colorChange 2s infinite;
-            /* 2초마다 색이 바뀜 (무한 반복) */
-            font-weight: bold;
-        }
-
-        /*상단 이동 스크롤 버튼*/
-        .btn-moveTop {
-            position: fixed;
-            right: 60px;
-            bottom: 60px;
-            width: 65px;
-            height: 65px;
-            background-color: #A593E0;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            font-size: 0;
-            /* 내부 텍스트 숨기기 */
-        }
-
-        .btn-moveTop::after {
-            content: "▲";
-            font-size: 24px;
-            color: white;
-            position: relative;
-            top: -3px;
-            /* 위쪽으로 약간 이동 */
-            left: 1px;
-            /* 오른쪽으로 약간 이동 */
-        }
-
-
-        .btn-moveTop:hover {
-            background-color: #566270;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-        }
-
-        /* 기존  스크롤 바 없애기 */
-        body::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* 위에 프로그레스 바 */
-        .bar-bg {
-            position: fixed;
-            width: 100%;
-            height: 5px;
-            top: 0;
-            left: 0;
-            background-color: #dfe2f7;
-            z-index: 1000;
-        }
-
-        .bar-ing {
-            position: absolute;
-            height: 5px;
-            bottom: 0;
-            left: 0;
-            background-color: #6a75ca;
-        }
+<<<<<<< HEAD
+    <script defer src="home.js"></script>
+    <link rel="stylesheet" href="home.css">
+=======
     </style>
+>>>>>>> 90d889184a7f59e6452f3ba7f1c914761221984b
 
     <script type="module">
         // Firebase SDK 라이브러리 가져오기
@@ -454,33 +100,15 @@
                 window.location.reload();
             }
         })
-
     </script>
 </head>
 
 <body>
-    <div class="bar-bg"> 
+    <div class="bar-bg">
         <span class="bar-ing"></span>
     </div>
     <script>
-        /*상단 이동 스크롤 바 */
-        let moveToTop = function () {
-            document.body.scrollIntoView({ behavior: "smooth" });
-        };
 
-        /* 프로그레스바 */
-        let scrollTop = 0;
-        let bar = document.querySelector(".bar-ing"); // .bar-ing 요소를 찾는 코드
-
-        window.addEventListener("scroll", function () {
-            scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            let per = Math.ceil(
-                (scrollTop / (document.body.scrollHeight - window.outerHeight)) * 100
-            );
-            if (bar) {    // 프로그레스바가 있으면 width값 주기
-                bar.style.width = per + "%";
-            }
-        }, false);
     </script>
     <div class="teamName">
         <h2>
@@ -493,7 +121,7 @@
         <!-- 팀원 사진 및 이름, MBTI, https://getbootstrap.com/docs/5.3/components/list-group/#flush 부트스트랩 사용 -->
         <div class="pictures">
             <div class="profile">
-                <img src="https://file.notion.so/f/f/83c75a39-3aba-4ba4-a792-7aefe4b07895/902ba6eb-438e-4d7e-b183-9d2213978698/%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg?table=block&id=19e2dc3e-f514-80a4-bd67-d00d463f05da&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&expirationTimestamp=1739887200000&signature=jm5-oQVjauKcKL7HGsGJeGIbYsECjfdcefdGFadv2rg&downloadName=%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg"
+                <img class="team-member" data-target="#Kim" src="https://file.notion.so/f/f/83c75a39-3aba-4ba4-a792-7aefe4b07895/902ba6eb-438e-4d7e-b183-9d2213978698/%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg?table=block&id=19e2dc3e-f514-80a4-bd67-d00d463f05da&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&expirationTimestamp=1739887200000&signature=jm5-oQVjauKcKL7HGsGJeGIbYsECjfdcefdGFadv2rg&downloadName=%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg"
                     alt="김동희">
                 <div class="name">
                     <h5 class="person-name">김동희</h5>
@@ -501,7 +129,7 @@
                 </div>
             </div>
             <div class="profile">
-                <img src="https://teamsparta.notion.site/image/attachment%3A003a8f55-69a0-41b8-8f3f-55d1a52bd872%3AKakaoTalk_20250117_175947148.jpg?table=block&id=b7d8f821-bdec-4e7a-a030-066806d7aa2b&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1280&userId=&cache=v2"
+                <img class="team-member" data-target="#KimTae" src="https://teamsparta.notion.site/image/attachment%3A003a8f55-69a0-41b8-8f3f-55d1a52bd872%3AKakaoTalk_20250117_175947148.jpg?table=block&id=b7d8f821-bdec-4e7a-a030-066806d7aa2b&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1280&userId=&cache=v2"
                     alt="김태정">
                 <div class="name">
                     <h5 class="person-name">김태정</h5>
@@ -509,7 +137,7 @@
                 </div>
             </div>
             <div class="profile">
-                <img src="https://teamsparta.notion.site/image/attachment%3A1adc8ee0-979c-460c-9ce0-a1b290ca25c0%3AKakaoTalk_Image_2025-02-18-16-04-35.jpeg?table=block&id=19e2dc3e-f514-80b2-abe6-f3025f743b00&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
+                <img class="team-member" data-target="#Lee" src="https://teamsparta.notion.site/image/attachment%3A1adc8ee0-979c-460c-9ce0-a1b290ca25c0%3AKakaoTalk_Image_2025-02-18-16-04-35.jpeg?table=block&id=19e2dc3e-f514-80b2-abe6-f3025f743b00&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
                     alt="이희망">
                 <div class="name">
                     <h5 class="person-name">이희망</h5>
@@ -517,7 +145,7 @@
                 </div>
             </div>
             <div class="profile">
-                <img src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2Fe8dafe33-cbe4-43cd-ad46-0365fc4eaf94%2Fimage.png?table=block&id=f1b5fb58-0663-44a5-8a51-91edddb138c5&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=480&userId=&cache=v2"
+                <img class="team-member" data-target="#Park" src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2Fe8dafe33-cbe4-43cd-ad46-0365fc4eaf94%2Fimage.png?table=block&id=f1b5fb58-0663-44a5-8a51-91edddb138c5&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=480&userId=&cache=v2"
                     alt="박선영">
                 <div class="name">
                     <h5 class="person-name">박선영</h5>
@@ -526,7 +154,51 @@
             </div>
         </div>
     </header>
-    
+
+    <div id="Lee" class="modal-background">
+        <div class="modal">
+            <h3>이희망</h3>
+            <p class="info-text"><strong>MBTI:</strong> ENFJ</p>
+            <img src="https://pbs.twimg.com/media/GHg-pffacAALB3f.jpg:large" alt="취미 이미지" />
+            <p class="info-text"><strong>취미:</strong> 음악 콘서트 다니기</p>
+            <p class="quote">다양한 노래 듣는 걸 좋아합니다. 최근 기리보이 콘서트에 다녀왔어요🎸</p>
+            <button type="button" class="btn-close"></button>
+        </div>
+    </div>
+
+    <div id="Park" class="modal-background">
+        <div class="modal">
+            <h3>박선영</h3>
+            <p class="info-text"><strong>MBTI:</strong> INFP</p>
+            <img src="https://raw.githubusercontent.com/commit5team/commit5/refs/heads/main/src/F49BD47C-BF2D-4EAE-A44D-339E380337ED.webp" alt="취미 이미지" />
+            <p class="info-text"><strong>취미:</strong> 게임</p>
+            <p class="quote">안녕하세요! 열심히 하겠습니다!</p>
+            <button type="button" class="btn-close"></button>
+        </div>
+    </div>
+
+    <div id="Kim" class="modal-background">
+        <div class="modal">
+            <h3>김동희</h3>
+            <p class="info-text"><strong>MBTI:</strong> ISTP</p>
+            <img src="https://raw.githubusercontent.com/commit5team/commit5/main/src/hobby.jpg" alt="취미 이미지" />
+            <p class="info-text"><strong>취미:</strong> 맛집탐방</p>
+            <p class="quote">잘 부탁드립니다.</p>
+            <button type="button" class="btn-close"></button>
+        </div>
+    </div>
+
+    <div id="KimTae" class="modal-background">
+        <div class="modal">
+            <h3>김태정</h3>
+            <p class="info-text"><strong>MBTI:</strong> ISFP</p>
+            <img src="https://github.com/commit5team/commit5/blob/main/src/%EC%9C%A0%ED%95%99%EC%8B%9C%EC%A0%88%EB%8F%99%EB%84%A4.jpg?raw=true" alt="취미 이미지" />
+            <p class="info-text"><strong>취미:</strong> 여행, 골프, 게임</p>
+            <p class="quote">지난주에 전공 졸업한 새내기입니다! 잘 부탁드려요!!</p>
+            <button type="button" class="btn-close"></button>
+        </div>
+    </div>
+
     <article class="teamRule">
         <h1 style="color:#566270; font-size: 55px; margin-bottom: 20px;">팀 규칙</h1>
         <div class="rule-item">
@@ -561,8 +233,14 @@
             <p>4. <span style="color:#A593E0">TIL</span> 남은날까지 맨날 쓰기 📝</p>
         </div>
     </article>
-    
+<<<<<<< HEAD
+
     <h1 style="color: #566270; margin: 30px 100px 0px 100px;">COMMENTS</h1>
+=======
+    
+    <article class="comments-box">
+    <h1 style="color: #566270; margin: 30px 100px 0px 0px;">COMMENTS</h1>
+>>>>>>> 90d889184a7f59e6452f3ba7f1c914761221984b
     <div class="input-container">
            <!-- Name 입력 박스 -->
         <div class="input-box">
@@ -580,18 +258,19 @@
     </div>
     <!-- 여기에 댓글이 추가 -->
     <div class="commentslist" id="commentslist">
-        <!-- 
+        <!--
         <div class="savedname">name</div>
         <div class="savedcomment">comment</div>
         <div class="saveddate">date</div>
         <button class="deletecomment" data-id="${docId}" id="deletecomment">delete</button>
         -->
     </div>
-    
+
+
     <button onclick="moveToTop()" class="btn-moveTop"></button>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 
-
+</article>
 </body>
 </html>
