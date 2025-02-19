@@ -102,6 +102,7 @@ body {
     /* 세로 정렬 */
     align-items: center;
     /* 세로 중앙 정렬 */
+    cursor: pointer;    /* 사진에 마우스 올리면 커서 바뀌게 수정 */
 }
 
 .profile img {
