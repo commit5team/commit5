@@ -5,10 +5,7 @@
     font-weight: 400;
     font-style: normal;
 }
-body{
-    display: flex;
-    flex-direction: column;
-}
+
 
 /*@@@@@@ modal @@@@@*/
 .modal-background {
@@ -25,7 +22,7 @@ body{
 
 .modal {
     width: 440px;
-    max-height: 90vh;
+    max-height: 70vh;
     overflow: auto;
     background-color: #e0e3fd;
     border-radius: 10px;
@@ -48,7 +45,7 @@ body{
     object-fit: cover;
 }
 
-.btn-close {
+.close-btn {
     width: 80%;
     padding: 10px;
     margin: 20px 0 30px 0;
@@ -61,7 +58,7 @@ body{
     transition: 0.3s ease-out;
 }
 
-.btn-close:hover {
+.close-btn:hover {
     background-color: #FFFFF3;
     color: #A593E0;
     transition: 0.3s ease-out;
@@ -163,7 +160,7 @@ body {
 /* 팀 규칙 */
 .teamRule {
     /* article로 묶어 칸 전체 색깔 바꿈 */
-    background-color: #FFFFF3;
+    background-color: white;
     padding: 150px 150px;
     border-radius: 10px;
     margin-top: 200px;
@@ -196,10 +193,15 @@ body {
 .gorl-item p {
     margin: 0;
 }
-
+/*방명록 전체*/
+.comments-box {
+    padding: 150px 150px;
+    background-color: white;
+}
 /*방명록*/
 .input-container {
-    margin: 0px 100px 0px 100px;
+    background-color: white;
+    margin: 20px 100px 0px 0px;
     /* 위, 아래 30px | 좌, 우 100px */
     display: flex;
     align-items: start;
@@ -228,7 +230,8 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 10px;
+    margin-top: 30px;
+    padding: 0px;
     background: transparent;
 }
 
@@ -276,8 +279,8 @@ body {
 }
 
 .commentslist {
-    margin: 10px 80px 100px 80px;
-    padding: 15px;
+    margin: 10px 80px 0px 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     gap: 2px;

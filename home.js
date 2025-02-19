@@ -28,8 +28,8 @@ $(document).ready(function () {
         $(targetModal).find(".modal").css("display", "block"); // 모달 내용도 보이게 설정
     });
 
-    $(".btn-close, .modal-background").click(function (e) {
-        if ($(e.target).hasClass("modal-background") || $(e.target).hasClass("btn-close")) {
+    $(".close-btn, .modal-background").click(function (e) {
+        if ($(e.target).hasClass("modal-background") || $(e.target).hasClass("close-btn")) {
             $(".modal-background").fadeOut(function () {
                 $(this).css("display", "none"); // fadeOut 후 display: none; 설정
             });

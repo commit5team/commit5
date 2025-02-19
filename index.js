@@ -4,8 +4,8 @@ $(document).ready(function () {
         $(targetModal).fadeIn();
     });
 
-    $(".btn-close, .modal-background").click(function (e) {
-        if ($(e.target).hasClass("modal-background") || $(e.target).hasClass("btn-close")) {
+    $(".close-btn, .modal-background").click(function (e) {
+        if ($(e.target).hasClass("modal-background") || $(e.target).hasClass("close-btn")) {
             $(".modal-background").fadeOut();
         }
     });
