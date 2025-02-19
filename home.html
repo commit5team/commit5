@@ -7,12 +7,12 @@
     <title>5조</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<<<<<<< HEAD
+    <<<<<<< HEAD
     <script defer src="home.js"></script>
     <link rel="stylesheet" href="home.css">
-=======
+    =======
     </style>
->>>>>>> 90d889184a7f59e6452f3ba7f1c914761221984b
+    >>>>>>> 90d889184a7f59e6452f3ba7f1c914761221984b
 
     <script type="module">
         // Firebase SDK 라이브러리 가져오기
@@ -42,7 +42,7 @@
         $("#savecomment").click(async function () {
             let name = $('#name').val();
             let comment = $('#comment').val();
-            let date = new Date().toISOString();  
+            let date = new Date().toISOString();
             // ISO 8601 형식으로 변환
             // Firestore에 날짜를 저장할 때 언제 어디서든 일관된 형식을 유지하기 위해 사용
 
@@ -90,7 +90,7 @@
         // $("#deletecomment").click(function() 안되는 이유 : 
         // 정적으로 존재하는 요소에만 동작함. 동적으로 추가된 요소에는 동작하지 않음.(댓글이 추가되는 것은 동적으로 추가되는 것)
         // 해서, document 전체에 클릭 이벤트를 등록하여 동적으로 추가되는 요소에도 동작하도록 함.
-        $(document).on("click", ".deletecomment", async function () { 
+        $(document).on("click", ".deletecomment", async function () {
             let docId = $(this).attr("data-id"); //클릭한 부분이 .deletecomment 버튼의 data-id 값 가져오기
             // attr() : 선택한 요소의 속성값을 가져오거나 속성값을 설정하는 메서드
 
@@ -104,145 +104,145 @@
 </head>
 
 <body>
-    <div class="bar-bg">
-        <span class="bar-ing"></span>
-    </div>
-    <script>
+<div class="bar-bg">
+    <span class="bar-ing"></span>
+</div>
+<script>
 
-    </script>
-    <div class="teamName">
-        <h2>
-            <span class="animated-text">Commit5</span>
-            <p style="font-size: 65px;">Github를 통해 협업하는 5조</p>
-        </h2>
-    </div>
+</script>
+<div class="teamName">
+    <h2>
+        <span class="animated-text">Commit5</span>
+        <p style="font-size: 65px;">Github를 통해 협업하는 5조</p>
+    </h2>
+</div>
 
-    <header>
-        <!-- 팀원 사진 및 이름, MBTI, https://getbootstrap.com/docs/5.3/components/list-group/#flush 부트스트랩 사용 -->
-        <div class="pictures">
-            <div class="profile">
-                <img class="team-member" data-target="#Kim" src="https://file.notion.so/f/f/83c75a39-3aba-4ba4-a792-7aefe4b07895/902ba6eb-438e-4d7e-b183-9d2213978698/%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg?table=block&id=19e2dc3e-f514-80a4-bd67-d00d463f05da&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&expirationTimestamp=1739887200000&signature=jm5-oQVjauKcKL7HGsGJeGIbYsECjfdcefdGFadv2rg&downloadName=%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg"
-                    alt="김동희">
-                <div class="name">
-                    <h5 class="person-name">김동희</h5>
-                    <h5 class="mbti">ISTP</h5>
-                </div>
-            </div>
-            <div class="profile">
-                <img class="team-member" data-target="#KimTae" src="https://teamsparta.notion.site/image/attachment%3A003a8f55-69a0-41b8-8f3f-55d1a52bd872%3AKakaoTalk_20250117_175947148.jpg?table=block&id=b7d8f821-bdec-4e7a-a030-066806d7aa2b&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1280&userId=&cache=v2"
-                    alt="김태정">
-                <div class="name">
-                    <h5 class="person-name">김태정</h5>
-                    <h5 class="mbti">ISFP</h5>
-                </div>
-            </div>
-            <div class="profile">
-                <img class="team-member" data-target="#Lee" src="https://teamsparta.notion.site/image/attachment%3A1adc8ee0-979c-460c-9ce0-a1b290ca25c0%3AKakaoTalk_Image_2025-02-18-16-04-35.jpeg?table=block&id=19e2dc3e-f514-80b2-abe6-f3025f743b00&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
-                    alt="이희망">
-                <div class="name">
-                    <h5 class="person-name">이희망</h5>
-                    <h5 class="mbti">ENFJ</h5>
-                </div>
-            </div>
-            <div class="profile">
-                <img class="team-member" data-target="#Park" src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2Fe8dafe33-cbe4-43cd-ad46-0365fc4eaf94%2Fimage.png?table=block&id=f1b5fb58-0663-44a5-8a51-91edddb138c5&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=480&userId=&cache=v2"
-                    alt="박선영">
-                <div class="name">
-                    <h5 class="person-name">박선영</h5>
-                    <h5 class="mbti">INFP</h5>
-                </div>
+<header>
+    <!-- 팀원 사진 및 이름, MBTI, https://getbootstrap.com/docs/5.3/components/list-group/#flush 부트스트랩 사용 -->
+    <div class="pictures">
+        <div class="profile">
+            <img class="team-member" data-target="#Kim" src="https://file.notion.so/f/f/83c75a39-3aba-4ba4-a792-7aefe4b07895/902ba6eb-438e-4d7e-b183-9d2213978698/%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg?table=block&id=19e2dc3e-f514-80a4-bd67-d00d463f05da&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&expirationTimestamp=1739887200000&signature=jm5-oQVjauKcKL7HGsGJeGIbYsECjfdcefdGFadv2rg&downloadName=%EC%B7%A8%EC%97%85%EC%82%AC%EC%A7%84.jpg"
+                 alt="김동희">
+            <div class="name">
+                <h5 class="person-name">김동희</h5>
+                <h5 class="mbti">ISTP</h5>
             </div>
         </div>
-    </header>
-
-    <div id="Lee" class="modal-background">
-        <div class="modal">
-            <h3>이희망</h3>
-            <p class="info-text"><strong>MBTI:</strong> ENFJ</p>
-            <img src="https://pbs.twimg.com/media/GHg-pffacAALB3f.jpg:large" alt="취미 이미지" />
-            <p class="info-text"><strong>취미:</strong> 음악 콘서트 다니기</p>
-            <p class="quote">다양한 노래 듣는 걸 좋아합니다. 최근 기리보이 콘서트에 다녀왔어요🎸</p>
-            <button type="button" class="btn-close"></button>
+        <div class="profile">
+            <img class="team-member" data-target="#KimTae" src="https://teamsparta.notion.site/image/attachment%3A003a8f55-69a0-41b8-8f3f-55d1a52bd872%3AKakaoTalk_20250117_175947148.jpg?table=block&id=b7d8f821-bdec-4e7a-a030-066806d7aa2b&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1280&userId=&cache=v2"
+                 alt="김태정">
+            <div class="name">
+                <h5 class="person-name">김태정</h5>
+                <h5 class="mbti">ISFP</h5>
+            </div>
+        </div>
+        <div class="profile">
+            <img class="team-member" data-target="#Lee" src="https://teamsparta.notion.site/image/attachment%3A1adc8ee0-979c-460c-9ce0-a1b290ca25c0%3AKakaoTalk_Image_2025-02-18-16-04-35.jpeg?table=block&id=19e2dc3e-f514-80b2-abe6-f3025f743b00&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=1390&userId=&cache=v2"
+                 alt="이희망">
+            <div class="name">
+                <h5 class="person-name">이희망</h5>
+                <h5 class="mbti">ENFJ</h5>
+            </div>
+        </div>
+        <div class="profile">
+            <img class="team-member" data-target="#Park" src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2Fe8dafe33-cbe4-43cd-ad46-0365fc4eaf94%2Fimage.png?table=block&id=f1b5fb58-0663-44a5-8a51-91edddb138c5&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=480&userId=&cache=v2"
+                 alt="박선영">
+            <div class="name">
+                <h5 class="person-name">박선영</h5>
+                <h5 class="mbti">INFP</h5>
+            </div>
         </div>
     </div>
+</header>
 
-    <div id="Park" class="modal-background">
-        <div class="modal">
-            <h3>박선영</h3>
-            <p class="info-text"><strong>MBTI:</strong> INFP</p>
-            <img src="https://raw.githubusercontent.com/commit5team/commit5/refs/heads/main/src/F49BD47C-BF2D-4EAE-A44D-339E380337ED.webp" alt="취미 이미지" />
-            <p class="info-text"><strong>취미:</strong> 게임</p>
-            <p class="quote">안녕하세요! 열심히 하겠습니다!</p>
-            <button type="button" class="btn-close"></button>
-        </div>
+<div id="Lee" class="modal-background">
+    <div class="modal">
+        <h3>이희망</h3>
+        <p class="info-text"><strong>MBTI:</strong> ENFJ</p>
+        <img src="https://pbs.twimg.com/media/GHg-pffacAALB3f.jpg:large" alt="취미 이미지" />
+        <p class="info-text"><strong>취미:</strong> 음악 콘서트 다니기</p>
+        <p class="quote">다양한 노래 듣는 걸 좋아합니다. 최근 기리보이 콘서트에 다녀왔어요🎸</p>
+        <button type="button" class="btn-close"></button>
     </div>
+</div>
 
-    <div id="Kim" class="modal-background">
-        <div class="modal">
-            <h3>김동희</h3>
-            <p class="info-text"><strong>MBTI:</strong> ISTP</p>
-            <img src="https://raw.githubusercontent.com/commit5team/commit5/main/src/hobby.jpg" alt="취미 이미지" />
-            <p class="info-text"><strong>취미:</strong> 맛집탐방</p>
-            <p class="quote">잘 부탁드립니다.</p>
-            <button type="button" class="btn-close"></button>
-        </div>
+<div id="Park" class="modal-background">
+    <div class="modal">
+        <h3>박선영</h3>
+        <p class="info-text"><strong>MBTI:</strong> INFP</p>
+        <img src="https://raw.githubusercontent.com/commit5team/commit5/refs/heads/main/src/F49BD47C-BF2D-4EAE-A44D-339E380337ED.webp" alt="취미 이미지" />
+        <p class="info-text"><strong>취미:</strong> 게임</p>
+        <p class="quote">안녕하세요! 열심히 하겠습니다!</p>
+        <button type="button" class="btn-close"></button>
     </div>
+</div>
 
-    <div id="KimTae" class="modal-background">
-        <div class="modal">
-            <h3>김태정</h3>
-            <p class="info-text"><strong>MBTI:</strong> ISFP</p>
-            <img src="https://github.com/commit5team/commit5/blob/main/src/%EC%9C%A0%ED%95%99%EC%8B%9C%EC%A0%88%EB%8F%99%EB%84%A4.jpg?raw=true" alt="취미 이미지" />
-            <p class="info-text"><strong>취미:</strong> 여행, 골프, 게임</p>
-            <p class="quote">지난주에 전공 졸업한 새내기입니다! 잘 부탁드려요!!</p>
-            <button type="button" class="btn-close"></button>
-        </div>
+<div id="Kim" class="modal-background">
+    <div class="modal">
+        <h3>김동희</h3>
+        <p class="info-text"><strong>MBTI:</strong> ISTP</p>
+        <img src="https://raw.githubusercontent.com/commit5team/commit5/main/src/hobby.jpg" alt="취미 이미지" />
+        <p class="info-text"><strong>취미:</strong> 맛집탐방</p>
+        <p class="quote">잘 부탁드립니다.</p>
+        <button type="button" class="btn-close"></button>
     </div>
+</div>
 
-    <article class="teamRule">
-        <h1 style="color:#566270; font-size: 55px; margin-bottom: 20px;">팀 규칙</h1>
-        <div class="rule-item">
-            <p>1. 시간 약속을 철저히 지키겠습니다.</p>
-        </div>
-        <div class="rule-item">
-            <p>2. 소통을 중요시하며 자리 비움이나 문제가 생기면 빠르게 공유하겠습니다.</p>
-        </div>
-        <div class="rule-item">
-            <p>3. 실수나 문제가 있어도 남 탓하지말고 문제를 해결해나가는데 집중하겠습니다.</p>
-        </div>
-        <div class="rule-item">
-            <p>4. 대화를 할 때는 종종 캠도 키고 화면공유도 잘 하겠습니다.</p>
-        </div>
-        <div class="rule-item">
-            <p>5. 파이팅하겠습니다!</p>
-        </div>
-    </article>
+<div id="KimTae" class="modal-background">
+    <div class="modal">
+        <h3>김태정</h3>
+        <p class="info-text"><strong>MBTI:</strong> ISFP</p>
+        <img src="https://github.com/commit5team/commit5/blob/main/src/%EC%9C%A0%ED%95%99%EC%8B%9C%EC%A0%88%EB%8F%99%EB%84%A4.jpg?raw=true" alt="취미 이미지" />
+        <p class="info-text"><strong>취미:</strong> 여행, 골프, 게임</p>
+        <p class="quote">지난주에 전공 졸업한 새내기입니다! 잘 부탁드려요!!</p>
+        <button type="button" class="btn-close"></button>
+    </div>
+</div>
 
-    <article class="teamgorl">
-        <h1 style="color:#A593E0; font-size: 55px; margin-bottom: 20px;">팀 목표</h1>
-        <div class="gorl-item">
-            <p>1. 매일 일정 소화하기</p>
-        </div>
-        <div class="gorl-item">
-            <p>2. 부끄러워도 물어보기</p>
-        </div>
-        <div class="gorl-item">
-            <p>3. 이번 프로젝트 포트폴리오로 사용하기</p>
-        </div>
-        <div class="gorl-item">
-            <p>4. <span style="color:#A593E0">TIL</span> 남은날까지 맨날 쓰기 📝</p>
-        </div>
-    </article>
+<article class="teamRule">
+    <h1 style="color:#566270; font-size: 55px; margin-bottom: 20px;">팀 규칙</h1>
+    <div class="rule-item">
+        <p>1. 시간 약속을 철저히 지키겠습니다.</p>
+    </div>
+    <div class="rule-item">
+        <p>2. 소통을 중요시하며 자리 비움이나 문제가 생기면 빠르게 공유하겠습니다.</p>
+    </div>
+    <div class="rule-item">
+        <p>3. 실수나 문제가 있어도 남 탓하지말고 문제를 해결해나가는데 집중하겠습니다.</p>
+    </div>
+    <div class="rule-item">
+        <p>4. 대화를 할 때는 종종 캠도 키고 화면공유도 잘 하겠습니다.</p>
+    </div>
+    <div class="rule-item">
+        <p>5. 파이팅하겠습니다!</p>
+    </div>
+</article>
+
+<article class="teamgorl">
+    <h1 style="color:#A593E0; font-size: 55px; margin-bottom: 20px;">팀 목표</h1>
+    <div class="gorl-item">
+        <p>1. 매일 일정 소화하기</p>
+    </div>
+    <div class="gorl-item">
+        <p>2. 부끄러워도 물어보기</p>
+    </div>
+    <div class="gorl-item">
+        <p>3. 이번 프로젝트 포트폴리오로 사용하기</p>
+    </div>
+    <div class="gorl-item">
+        <p>4. <span style="color:#A593E0">TIL</span> 남은날까지 맨날 쓰기 📝</p>
+    </div>
+</article>
 <<<<<<< HEAD
 
-    <h1 style="color: #566270; margin: 30px 100px 0px 100px;">COMMENTS</h1>
+<h1 style="color: #566270; margin: 30px 100px 0px 100px;">COMMENTS</h1>
 =======
-    
-    <article class="comments-box">
+
+<article class="comments-box">
     <h1 style="color: #566270; margin: 30px 100px 0px 0px;">COMMENTS</h1>
->>>>>>> 90d889184a7f59e6452f3ba7f1c914761221984b
+    >>>>>>> 90d889184a7f59e6452f3ba7f1c914761221984b
     <div class="input-container">
-           <!-- Name 입력 박스 -->
+        <!-- Name 입력 박스 -->
         <div class="input-box">
             <label for="name">name</label>
             <input type="text" id="name">
