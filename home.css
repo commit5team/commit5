@@ -5,6 +5,10 @@
     font-weight: 400;
     font-style: normal;
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
 
 /*@@@@@@ modal @@@@@*/
 .modal-background {
